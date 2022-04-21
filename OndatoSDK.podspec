@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
   spec.ios.vendored_frameworks  = 'OndatoSDK.framework', 'FaceTecSDK.framework'
   spec.dependency "QKMRZScanner"
   spec.dependency "lottie-ios"
-  spec.dependency "NFCPassportReader", git:"https://github.com/AndyQ/NFCPassportReader.git"
+  spec.dependency "NFCPassportReader"
   spec.script_phase = { :name => 'Strip unused architectures', :script => 'bash "${PODS_ROOT}/OndatoSDKiOS/FaceTecSDK.framework/strip-unused-architectures-from-target.sh"
 ' }
 end
