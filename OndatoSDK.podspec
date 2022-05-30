@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = 'OndatoSDKiOS'
-  spec.version      = '1.8.14'
+  spec.version      = '1.8.18'
   spec.platform     = :ios
   spec.summary      = 'Ondato iOS SDK'
   spec.ios.deployment_target = '11.0'
@@ -8,9 +8,8 @@ Pod::Spec.new do |spec|
   spec.authors      = { 'Ondato' => 'info@ondato.com' }
   spec.source       = { :git => 'git@github.com:ondato/ondato-sdk-ios.git', :tag => spec.version }
   spec.ios.vendored_frameworks  = 'OndatoSDK.framework', 'FaceTecSDK.framework'
-  spec.dependency "QKMRZScanner"
-  spec.dependency "lottie-ios"
-  spec.dependency "NFCPassportReader"
+  spec.dependency "SwiftyTesseract", "~> 3.1.3"
+  spec.dependency "OpenSSL-Universal", '1.1.180'
   spec.script_phase = { :name => 'Strip unused architectures', :script => 'bash "${PODS_ROOT}/OndatoSDKiOS/FaceTecSDK.framework/strip-unused-architectures-from-target.sh"
 ' }
 end
