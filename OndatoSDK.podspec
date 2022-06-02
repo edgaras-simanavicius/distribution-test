@@ -9,6 +9,6 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => 'git@github.com:ondato/ondato-sdk-ios.git', :tag => spec.version }
   spec.ios.vendored_frameworks  = 'OndatoSDK.framework', 'FaceTecSDK.framework', 'SwiftyTesseract.framework', 'libtesseract.xcframework'
   spec.dependency "OpenSSL-Universal", '1.1.180'
-  spec.script_phase = { :name => 'Strip unused architectures', :script => 'bash "${PODS_ROOT}/OndatoSDKiOS/FaceTecSDK.framework/strip-unused-architectures-from-target.sh"
+  spec.script_phase = { :name => 'Strip unused architectures', :script => 'bash "${PODS_ROOT}/OndatoSDK/FaceTecSDK.framework/strip-unused-architectures-from-target.sh"
 ' }
 end
